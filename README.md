@@ -55,6 +55,7 @@ Email: user1@gmail.com
 ②鈴木花子
 Name: Hanako Suzuki
 Email: user2@gmail.com
+
 ※パスワードは全て"password"
 
 ## 商品画像
