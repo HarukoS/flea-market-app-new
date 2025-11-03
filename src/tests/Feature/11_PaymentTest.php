@@ -24,7 +24,7 @@ class PaymentTest extends TestCase
 
     /**
      * @test
-     * 支払い方法の選択が反映される
+     * 小計画面で変更が反映される
      */
     public function test_selected_payment_method_is_applied()
     {

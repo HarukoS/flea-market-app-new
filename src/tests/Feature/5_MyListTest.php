@@ -79,7 +79,7 @@ class MyListTest extends TestCase
             'address' => '東京都新宿区1-1-1',
         ]);
 
-        // テスト手順2: マイリストページを開く
+        // テスト手順2、3: マイリストページを開き、購入済み商品を確認する
         $response = $this->actingAs($user)->get('/?tab=mylist');
         $response->assertStatus(200);
 

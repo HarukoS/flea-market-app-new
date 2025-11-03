@@ -19,7 +19,7 @@ class LoginTest extends TestCase
         $response = $this->get('/login');
         $response->assertStatus(200);
 
-        // テスト手順2: メールアドレスを入力せずに他の項目を入力
+        // テスト手順2: メールアドレスを入力せずに他の項目を入力する
         $formData = [
             'email' => '',
             'password' => 'password123',
@@ -44,7 +44,7 @@ class LoginTest extends TestCase
         $response = $this->get('/login');
         $response->assertStatus(200);
 
-        // テスト手順2: パスワードを入力せずに他の項目を入力
+        // テスト手順2: パスワードを入力せずに他の項目を入力する
         $formData = [
             'email' => 'test@example.com',
             'password' => '',
@@ -69,7 +69,7 @@ class LoginTest extends TestCase
         $response = $this->get('/login');
         $response->assertStatus(200);
 
-        // テスト手順2: 必要項目を登録されていない情報を入力
+        // テスト手順2: 必要項目を登録されていない情報を入力する
         $formData = [
             'email' => 'notfound@example.com',
             'password' => 'wrongpassword',

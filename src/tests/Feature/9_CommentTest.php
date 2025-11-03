@@ -24,7 +24,7 @@ class CommentTest extends TestCase
 
     /**
      * @test
-     * いいねアイコンを押下することによって、いいねした商品として登録することができる。
+     * ログイン済みのユーザーはコメントを送信できる
      */
     public function test_authenticated_user_can_submit_comment()
     {
@@ -83,7 +83,7 @@ class CommentTest extends TestCase
 
     /**
      * @test
-     * ログイン前のユーザーはコメントを送信できない
+     * コメントが入力されていない場合、バリデーションメッセージが表示される
      */
     public function test_comment_is_required()
     {

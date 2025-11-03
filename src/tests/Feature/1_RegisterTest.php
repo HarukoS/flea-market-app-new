@@ -11,7 +11,7 @@ class RegisterTest extends TestCase
 
     /**
      * @test
-     * 名前が未入力の場合はバリデーションメッセージが表示される
+     * 名前が入力されていない場合、バリデーションメッセージが表示される
      */
     public function test_name_is_required()
     {
@@ -19,7 +19,7 @@ class RegisterTest extends TestCase
         $response = $this->get('/register');
         $response->assertStatus(200);
 
-        // テスト手順2: 名前を入力せずに他の項目を入力
+        // テスト手順2: 名前を入力せずに他の項目を入力する
         $formData = [
             'name' => '',
             'email' => 'test@example.com',
@@ -46,7 +46,7 @@ class RegisterTest extends TestCase
         $response = $this->get('/register');
         $response->assertStatus(200);
 
-        // テスト手順2: メールアドレスを入力せずに他の項目を入力
+        // テスト手順2: メールアドレスを入力せずに他の項目を入力する
         $formData = [
             'name' => 'test',
             'email' => '',
@@ -73,7 +73,7 @@ class RegisterTest extends TestCase
         $response = $this->get('/register');
         $response->assertStatus(200);
 
-        // テスト手順2: パスワードを入力せずに他の項目を入力
+        // テスト手順2: パスワードを入力せずに他の項目を入力する
         $formData = [
             'name' => 'test',
             'email' => 'test@example.com',
@@ -100,7 +100,7 @@ class RegisterTest extends TestCase
         $response = $this->get('/register');
         $response->assertStatus(200);
 
-        // テスト手順2: 7文字以下のパスワードと他の必要項目を入力
+        // テスト手順2: 7文字以下のパスワードと他の必要項目を入力する
         $formData = [
             'name' => 'test',
             'email' => 'test@example.com',
@@ -127,7 +127,7 @@ class RegisterTest extends TestCase
         $response = $this->get('/register');
         $response->assertStatus(200);
 
-        // テスト手順2: 確認用パスワードと異なるパスワードを入力し他の必要項目を入力
+        // テスト手順2: 確認用パスワードと異なるパスワードを入力し、他の必要項目も入力する
         $formData = [
             'name' => 'test',
             'email' => 'test@example.com',
@@ -154,7 +154,7 @@ class RegisterTest extends TestCase
         $response = $this->get('/register');
         $response->assertStatus(200);
 
-        // テスト手順2: 全ての必要項目を正しく入力
+        // テスト手順2: 全ての必要項目を正しく入力する
         $formData = [
             'name' => 'test',
             'email' => 'test@example.com',

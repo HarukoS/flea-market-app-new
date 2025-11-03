@@ -83,7 +83,7 @@ class ItemDetailTest extends TestCase
 
     /**
      * @test
-     * 複数選択されたカテゴリが表示されている
+     * 複数選択されたカテゴリが表示されているか
      */
     public function test_multiple_selected_categories_are_displayed()
     {

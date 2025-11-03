@@ -33,7 +33,7 @@ class LogoutTest extends TestCase
         // テスト手順2: ログアウトボタンを押す
         $response = $this->post('/logout');
 
-        // 期待挙動: ログイン処理が実行される
+        // 期待挙動: ログアウト処理が実行される
         $this->assertGuest();
     }
 }
