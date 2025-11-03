@@ -1,4 +1,4 @@
-# "Coachtech"
+# フリマアプリ"Coachtech"
     フリマアプリ「Coachtech」
 
 ## 作成した目的
@@ -63,4 +63,4 @@ Email: user2@gmail.com
 Stripe決済画面ではテスト用カード番号「4242 4242 4242 4242」をお使いください。
 
 ## mailhog
-http://localhost:8025
+URL: http://localhost:8025
