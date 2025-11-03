@@ -72,14 +72,9 @@
         > CREATE DATABASE demo_test;
         > SHOW DATABASES;
     2. .envファイルをコピーして.env.testingを作成し、環境変数を変更
-        APP_NAME=Laravel
         APP_ENV=test
         APP_KEY=
-        APP_DEBUG=true
-        APP_URL=http://localhost
         DB_CONNECTION=mysql_test
-        DB_HOST=mysql
-        DB_PORT=3306
         DB_DATABASE=demo_test
         DB_USERNAME=root
         DB_PASSWORD=root
