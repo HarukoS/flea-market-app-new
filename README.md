@@ -39,8 +39,9 @@
     2. composer install
     3. .env.exampleファイルから.envを作成し、環境変数を変更
         .envにSTRIPE_KEYを追加
-        STRIPE_KEY=pk_test_xxxxxxxxxxxxxxx
-        STRIPE_SECRET=sk_test_xxxxxxxxxxxxxxx
+        STRIPE_KEY=pk_test_************************
+        STRIPE_SECRET=sk_test_************************
+        MAIL_FROM_ADDRESS=flea_market@example.com
         MAIL_FROM_NAME="Coachtech Flea Market App"
     4. php artisan key:generate
     5. php artisan migrate
@@ -58,7 +59,7 @@
     ※パスワードは全て"password"
 
 ## 商品画像
-    商品画像はお手数ですがReleasesの「item_image」のZipファイルをダウンロードしていただき、Storageディレクトリ（src>storage>app>public>item_image）に保存をお願いいたします。
+    商品画像は、Releases ページにある「item_image.zip」をダウンロードし、src/storage/app/public/item_image ディレクトリに展開してください。
 
 ## Stripe決済
     Stripe決済画面ではテスト用カード番号「4242 4242 4242 4242」をお使いください。
@@ -72,13 +73,7 @@
         > CREATE DATABASE demo_test;
         > SHOW DATABASES;
     2. .envファイルをコピーして.env.testingを作成し、環境変数を変更
-        APP_ENV=test
-        APP_KEY=
-        DB_CONNECTION=mysql_test
-        DB_DATABASE=demo_test
-        DB_USERNAME=root
-        DB_PASSWORD=root
-    4. php artisan key:generate --env=testing
-    5. php artisan config:clear
-    6. php artisan migrate --env=testing
-    7. php artisan test --testsuite=Feature
+    3. php artisan key:generate --env=testing
+    4. php artisan config:clear
+    5. php artisan migrate --env=testing
+    6. php artisan test --testsuite=Feature
