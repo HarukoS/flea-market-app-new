@@ -56,6 +56,9 @@
     2. 鈴木花子
        Name: Hanako Suzuki
        Email: user2@gmail.com
+    3. 鈴木次郎
+       Name: Jiro Suzuki
+       Email: user3@gmail.com
     ※パスワードは全て"password"
 
 ## 商品画像
