@@ -4,6 +4,11 @@
 <link rel="stylesheet" href="{{ asset('css/transaction.css') }}">
 @endsection
 
+@php
+$hideHeaderNav = true;
+$hideHeaderSearch = true;
+@endphp
+
 @section('content')
 <main class="main">
     <div class="transaction-other">
