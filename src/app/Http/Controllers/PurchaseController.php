@@ -44,20 +44,19 @@ class PurchaseController extends Controller
      */
     public function preStore(PurchaseRequest $request, Item $item)
     {
-        $purchase = Purchase::create([
-            'user_id' => Auth::id(),
-            'item_id' => $item->id,
-            'payment_method' => $request->payment_method,
-            'postal_code' => $request->postal_code ?? Auth::user()->postal_code,
-            'address' => $request->address ?? Auth::user()->address,
-            'building' => $request->building ?? Auth::user()->building,
+        session([
+            'purchase_data' => [
+                'item_id' => $item->id,
+                'payment_method' => $request->payment_method,
+                'postal_code' => $request->postal_code ?? Auth::user()->postal_code,
+                'address' => $request->address ?? Auth::user()->address,
+                'building' => $request->building ?? Auth::user()->building,
+            ]
         ]);
-
-        $method = $request->payment_method;
 
         return redirect()->route('payment.payment', [
             'item' => $item->id,
-            'method' => $method
+            'method' => $request->payment_method
         ]);
     }
 
@@ -91,6 +90,23 @@ class PurchaseController extends Controller
 
     public function store()
     {
+        $data = session('purchase_data');
+
+        if (!$data) {
+            abort(403);
+        }
+
+        Purchase::create([
+            'user_id' => Auth::id(),
+            'item_id' => $data['item_id'],
+            'payment_method' => $data['payment_method'],
+            'postal_code' => $data['postal_code'],
+            'address' => $data['address'],
+            'building' => $data['building'],
+        ]);
+
+        session()->forget('purchase_data');
+
         return redirect()->route('index')->with('success', '購入が完了しました！');
     }
 }

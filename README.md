@@ -51,8 +51,8 @@
 ### ダミーデータ説明
 ## ユーザー一覧
     1. 鈴木太郎
-       Name: Taro Suzuki
-       Email: user1@gmail.com
+        Name: Taro Suzuki
+        Email: user1@gmail.com
     2. 鈴木花子
        Name: Hanako Suzuki
        Email: user2@gmail.com

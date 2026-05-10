@@ -11,6 +11,8 @@ use App\Http\Controllers\Auth\CustomAuthenticatedSessionController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\RatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -119,3 +121,17 @@ Route::prefix('payment')->name('payment.')->group(function () {
     Route::post('/intent', [PurchaseController::class, 'createIntent'])->name('intent'); // Stripe用API
     Route::post('/store', [PurchaseController::class, 'store'])->name('store'); // Stripe決済完了
 });
+
+Route::get('/transaction/{item}', [UsersController::class, 'showTransaction'])
+    ->name('transaction.show');
+
+Route::post('/messages', [MessageController::class, 'store'])->name('messages.store');
+
+Route::put('/messages/{message}', [MessageController::class, 'update'])->name('messages.update');
+
+Route::delete('/messages/{message}', [MessageController::class, 'destroy'])->name('messages.destroy');
+
+Route::post('/purchase/{purchase}/complete', [PurchaseController::class, 'complete'])
+    ->name('purchase.complete');
+
+Route::post('/ratings', [RatingController::class, 'store'])->name('ratings.store');

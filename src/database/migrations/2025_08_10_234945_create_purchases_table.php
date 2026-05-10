@@ -23,6 +23,10 @@ class CreatePurchasesTable extends Migration
             $table->string('building', 255)->nullable();;
             $table->timestamps();
 
+            $table->boolean('is_completed')->default(false);
+            $table->timestamp('completed_at')->nullable();
+            $table->string('status')->default('in_progress');
+
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('item_id')->references('id')->on('items');
         });

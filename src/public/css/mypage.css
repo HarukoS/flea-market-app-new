@@ -2,8 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
     margin-top: 50px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30%;
 }
 
 .profile-image {
@@ -24,7 +29,6 @@
 }
 
 .profile-name {
-    margin-right: 25%;
     font-size: 36px;
     font-weight: bold;
 }
@@ -105,6 +109,43 @@
     font-weight: bold;
 }
 
+.message {
+    width: 27px;
+    height: 26px;
+    border-radius: 10px;
+    background-color: #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.star-rating {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 1;
+    width: 200px;
+}
+
+.star-rating-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #FFF048;
+}
+
+.star-rating-back {
+    color: #D9D9D9;
+}
+
 .items-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -166,4 +207,20 @@
     transform: rotate(-45deg);
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.message-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #FF0000;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
