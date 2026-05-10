@@ -22,10 +22,10 @@
     - MySQL 8.0.26
 
 ## テーブル設計
-<img width="956" height="1626" alt="image" src="https://github.com/user-attachments/assets/69ec9c8a-44f0-4e94-8944-c6422eb55f04" />
+[テーブル.pdf](https://github.com/user-attachments/files/27567466/default.pdf)
 
 ## ER図
-<img width="1121" height="811" alt="er2" src="https://github.com/user-attachments/assets/8dddf936-6024-492e-8f0f-d60b47a3246a" />
+<img width="1289" height="871" alt="er" src="https://github.com/user-attachments/assets/5456b894-ace0-4cda-bd18-dc0c82b509b3" />
 
 ## 環境構築
 
