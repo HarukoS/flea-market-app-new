@@ -131,7 +131,4 @@ Route::put('/messages/{message}', [MessageController::class, 'update'])->name('m
 
 Route::delete('/messages/{message}', [MessageController::class, 'destroy'])->name('messages.destroy');
 
-Route::post('/purchase/{purchase}/complete', [PurchaseController::class, 'complete'])
-    ->name('purchase.complete');
-
 Route::post('/ratings', [RatingController::class, 'store'])->name('ratings.store');

@@ -10,7 +10,9 @@ use App\Http\Requests\MessageRequest;
 
 class MessageController extends Controller
 {
-
+    /**
+     * 取引メッセージ登録
+     */
     public function store(MessageRequest $request)
     {
         $path = null;
@@ -29,6 +31,9 @@ class MessageController extends Controller
         return back();
     }
 
+    /**
+     * 取引メッセージ編集
+     */
     public function update(MessageRequest $request, Message $message)
     {
         if ($message->sender_id !== Auth::id()) {
@@ -54,6 +59,9 @@ class MessageController extends Controller
         return back();
     }
 
+    /**
+     * 取引メッセージ削除
+     */
     public function destroy(Message $message)
     {
         if ($message->sender_id !== Auth::id()) {
@@ -63,16 +71,5 @@ class MessageController extends Controller
         $message->delete();
 
         return back();
-    }
-
-    public function show($itemId)
-    {
-        $purchase = Purchase::with(['item.user'])->where('item_id', $itemId)->firstOrFail();
-
-        $messages = Message::where('purchase_id', $purchase->id)
-            ->orderBy('created_at', 'asc')
-            ->get();
-
-        return view('transaction', compact('purchase', 'messages'));
     }
 }

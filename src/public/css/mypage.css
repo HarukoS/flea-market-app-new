@@ -11,6 +11,14 @@
     margin-right: 30%;
 }
 
+@media screen and (max-width: 850px) {
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10%;
+    }
+}
+
 .profile-image {
     width: 150px;
     height: 150px;

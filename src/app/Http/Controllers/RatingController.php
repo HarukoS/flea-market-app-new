@@ -11,6 +11,9 @@ use App\Mail\TransactionCompletedMail;
 
 class RatingController extends Controller
 {
+    /**
+     * 取引後評価送信、取引完了
+     */
     public function store(Request $request)
     {
         $request->validate([
