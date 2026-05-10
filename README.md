@@ -27,7 +27,7 @@
 <img width="652" height="604" alt="Table2" src="https://github.com/user-attachments/assets/4a439f2a-3d32-4d09-9dbc-354e40fe050e" />
 
 ## ER図
-<img width="1289" height="871" alt="er" src="https://github.com/user-attachments/assets/5456b894-ace0-4cda-bd18-dc0c82b509b3" />
+<img width="1289" height="871" alt="er" src="https://github.com/user-attachments/assets/d53f6886-0683-4d47-b2b7-4e828b4c8e50" />
 
 ## 環境構築
 
