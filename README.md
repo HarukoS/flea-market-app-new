@@ -15,6 +15,7 @@
     - 商品購入機能（支払い方法選択、stripe決済機能、配送先住所変更機能付き）
     - ユーザープロフィール編集機能（プロフィール画像、ユーザー名、住所）
     - 商品出品機能
+    - 取引チャット、取引相手評価、取引完了機能
 
 ## 使用技術（実行環境）
     - PHP 8.1
@@ -22,7 +23,7 @@
     - MySQL 8.0.26
 
 ## テーブル設計
-[テーブル.pdf](https://github.com/user-attachments/files/27567466/default.pdf)
+<img width="333" height="701" alt="Table" src="https://github.com/user-attachments/assets/8e88f434-935f-431f-876c-60e0dbbe4c86" />
 
 ## ER図
 <img width="1289" height="871" alt="er" src="https://github.com/user-attachments/assets/5456b894-ace0-4cda-bd18-dc0c82b509b3" />
