@@ -23,7 +23,8 @@
     - MySQL 8.0.26
 
 ## テーブル設計
-<img width="333" height="701" alt="Table" src="https://github.com/user-attachments/assets/8e88f434-935f-431f-876c-60e0dbbe4c86" />
+<img width="656" height="793" alt="Table1" src="https://github.com/user-attachments/assets/c966f7c2-1be8-4c1b-9f2a-d3c8cfe66c5a" />
+<img width="652" height="604" alt="Table2" src="https://github.com/user-attachments/assets/4a439f2a-3d32-4d09-9dbc-354e40fe050e" />
 
 ## ER図
 <img width="1289" height="871" alt="er" src="https://github.com/user-attachments/assets/5456b894-ace0-4cda-bd18-dc0c82b509b3" />
